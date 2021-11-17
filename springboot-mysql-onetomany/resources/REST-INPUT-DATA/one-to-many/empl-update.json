@@ -1,0 +1,9 @@
+PUT : localhost:8686/api/employee/update/
+{
+            "id": 1,
+            "firstName": "Tariq",
+            "middleName": "",
+            "lastName": "Ahsan",
+            "managerName": "George Lembrick",
+            "salary": 97000.00
+}

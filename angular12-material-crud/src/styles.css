@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+div.container { 
+    margin: 0px 40px;
+}
+.fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+form.normal-form {
+    margin: 10px;
+}
+
+.controls-container{
+    width: 100%;
+    padding: 5%;
+}
+
+.controls-container > * {
+    width: 100%;
+}
+
+.add-bottom-padding {
+    padding-bottom: 10px;
+}
+
+.add-top-padding {
+    padding-top: 10px;
+}
+
+mat-radio-group mat-radio-button {
+    margin-left: 5px;
+}
+
+.button-row button{
+    margin: 5px;
+}
+
+/* notification */
+snack-bar-container.success {
+    background-color:darkseagreen;
+    color:aliceblue;
+}
+
+snack-bar-container.notification simple-snack-bar {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.hide{
+    display: none;
+}
+
+/* mat-table */
+mat-footer-row mat-footer-cell{
+    justify-content: center;
+    font-style: italic;
+}

@@ -1,0 +1,18 @@
+POST: localhost:8686/api/v1/department/add
+{
+    "name": "Engineering",
+    "employees":[
+        {"firstName": "Tariq",
+         "middleName": "",
+         "lastName": "Ahsan",
+         "managerName": "Brian Thomas",
+         "salary": 95000.00
+        },
+        {"firstName": "Tausif",
+         "middleName": "R",
+         "lastName": "Ahsan",
+         "managerName": "Brian Thomas",
+         "salary": 133000.00
+        }
+    ]
+}

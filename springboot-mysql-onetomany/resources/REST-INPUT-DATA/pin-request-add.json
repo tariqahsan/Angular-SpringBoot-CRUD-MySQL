@@ -1,0 +1,18 @@
+POST: localhost:8686/api/v1/pinRequests/add
+
+{
+    "parentOrgName" :"Parent Org Name",
+    "parentCageCode": "152618153",
+    "divisionName" : "Boeing Aeronautics",
+    "divisionCageCode" : "152619154",
+    "createDate": "2021-07-18",  
+    "responseInd" : "Y",
+    "replacement" : "N",
+    "poc" : {
+		"lastName" : "Ahsan",
+		"firstName" : "Ahsan",
+		"phone": "111-111-1111",
+		"email": "tariq.ahsan.civ@mail.mil"
+    }
+
+}           

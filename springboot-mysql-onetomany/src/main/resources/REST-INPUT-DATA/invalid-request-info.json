@@ -1,0 +1,30 @@
+{
+    "decimalNumber":3.9,
+    "email": "tariqahsan@"
+}
+
+POST: localhost:8686/create
+
+TEST Result :
+[
+    {
+        "code": null,
+        "message": "Enter a valid email address of length 55",
+        "developerMessage": null,
+        "moreInfo": null,
+        "fieldName": "email",
+        "severityLevel": null,
+        "errorMessageList": [],
+        "formFieldNames": []
+    },
+    {
+        "code": null,
+        "message": "Decimal value cannot have less than 3 digits after decimal point",
+        "developerMessage": null,
+        "moreInfo": null,
+        "fieldName": "decimalNumber",
+        "severityLevel": null,
+        "errorMessageList": [],
+        "formFieldNames": []
+    }
+]

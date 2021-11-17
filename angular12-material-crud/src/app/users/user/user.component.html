@@ -1,0 +1,94 @@
+<form [formGroup]="userService.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controls-container">
+                <input type="hidden" formControlName="$key">
+                <mat-form-field appearance="legacy">
+                    <input formControlName="firstName" matInput placeholder="First Name*">
+                    <mat-error>First Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="middleName" matInput placeholder="Middle Name">
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="lastName" matInput placeholder="Last Name*">
+                    <mat-error>Last Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="email" matInput placeholder="Email">
+                    <mat-error>Email is invalid</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="phone" matInput placeholder="Phone*">
+                    <mat-error *ngIf="userService.form.controls['phone'].errors?.required">Phone number is required</mat-error>
+                    <mat-error *ngIf="userService.form.controls['phone'].errors?.minlength">Phone number minmum length length is 10</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+       
+       <mat-grid-tile>
+            <div class="controls-container">
+                <div formGroupName ="address">
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="street1" matInput placeholder="Street1">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="street2" matInput placeholder="Street2">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="city" matInput placeholder="City">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="state" matInput placeholder="State">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="zip5" matInput placeholder="Zip5">
+                        <!-- <mat-error *ngIf="userService.form.controls['address.phone'].errors?.maxlength">Zip5 length is 5</mat-error> -->
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="zip4" matInput placeholder="Zip4">
+                    </mat-form-field>
+                </div>
+                <!-- <div class="add-bottom-paddingr">
+                    <mat-radio-group formControlName="gender">
+                        <mat-radio-button value="1">Male</mat-radio-button>
+                        <mat-radio-button value="2">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div> -->
+                <!-- <mat-form-field>
+                    <mat-select formControlName="department" placeholder="Deparment">
+                      <mat-option>None
+                      </mat-option>
+                      <ng-container *ngFor="let department of departments$ | async" >
+                          <mat-option value="{{department.id}}">{{department.name}}</mat-option>
+                      </ng-container>
+                    </mat-select>
+                </mat-form-field> -->
+
+                  <!-- <mat-form-field appearance="fill">
+                    <mat-label>Select an option</mat-label>
+                    <mat-select [(value)]="selected">
+                        <mat-option *ngFor="let user of (users$ | async)" [value]="user">{{user.id}}</mat-option>
+                    </mat-select>
+                  </mat-form-field> -->
+                
+                <!-- <p>You selected: {{selected.email}}</p> -->
+                  <!-- <mat-form-field>
+                    <input formControlName="hireDate" matInput [matDatepicker]="picker" placeholder="Hire Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <div class="add-bottom-paddingr">
+                      <mat-checkbox formControlName="isPermanent">
+                        Permanent Employee
+                      </mat-checkbox>
+                  </div> -->
+                  <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="userService.form.invalid">Submit</button>
+                    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                  </div>
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+</form>
+

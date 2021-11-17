@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "amcrud-a58c9": {
+      "hosting": {
+        "angular12-material-crud": [
+          "amcrud-a58c9"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+POST: localhost:8686/api/add
+
+{
+"firstName": "Tausif",
+"middleName": "R",
+"lastName": "Ahsan",
+"phone": "(571)999-9999",
+"email": "tausif_ahsan@yahoo.com",
+"address": {
+            "street1": "7185 Shady Palm Dr.",
+            "street2": "",
+            "city": "Springfield",
+            "state": "VA",
+            "zip5": "22153",
+            "zip4": ""
+        }
+}
+            

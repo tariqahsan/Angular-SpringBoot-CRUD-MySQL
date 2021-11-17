@@ -1,0 +1,17 @@
+POST: localhost:8686/api/add
+
+{
+"firstName": "Tariq",
+"middleName": "",
+"lastName": "Ahsan",
+"phone": "(630) 728-2091",
+"email": "tariqahsan@yahoo.com",
+"address": {
+            "street1": "42766 Locklear Ter.",
+            "street2": "",
+            "city": "Chantilly",
+            "state": "VA",
+            "zip5": "20152",
+            "zip4": ""
+        }
+}            

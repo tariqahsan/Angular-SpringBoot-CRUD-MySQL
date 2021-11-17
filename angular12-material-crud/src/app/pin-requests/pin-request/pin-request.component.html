@@ -1,0 +1,61 @@
+<form [formGroup]="pinRequestService.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controls-container">
+                <input type="hidden" formControlName="$key">
+                <mat-form-field appearance="legacy">
+                    <input formControlName="parentOrgName" matInput placeholder="Parent Organization Name*">
+                    <mat-error>Parent Org Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="parentCageCode" matInput placeholder="Parent Organization CAGE Code" required>
+                    <mat-error>Parent Cage Code is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="divisionName" matInput placeholder="Division Name">
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <input formControlName="divisionCageCode" matInput placeholder="Division CAGE Code">
+                </mat-form-field>
+                <div class="add-bottom-paddingr">
+                    <mat-checkbox formControlName="replacement">
+                        Are you replacing?
+                    </mat-checkbox>
+        
+                </div>
+            </div>
+        </mat-grid-tile>
+       <mat-grid-tile>
+            <div class="controls-container">         
+                <div formGroupName ="poc">
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="lastName" matInput placeholder="Requester Last Name*">
+                        <mat-error>Last Name is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="firstName" matInput placeholder="Requester First Name*">
+                        <mat-error>First Name is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                        <input formControlName="phone"  matInput placeholder="Requester Phone" required>
+                        <!-- <mat-error *ngIf="phone.invalid"></mat-error> -->
+                        <!-- <mat-error *ngIf="pinRequestService.form.pointOfContact.errorsphone.errors?.required">Phone number is required</mat-error> -->
+                        <!-- <mat-error *ngIf="pinRequestService.form.get('pointOfContact').get('phone').">Email required</mat-error> -->
+                        <!-- <mat-error *ngIf="pinRequestService.form.controls['phone'].errors?.required">Phone number is required</mat-error> -->
+                        <!-- <mat-error *ngIf="pinRequestService.form.controls['pointOfContact.phone'].hasError('required')">Phone number is required</mat-error> -->
+                        <!-- <mat-error *ngIf="pinRequestService.form.controls['pointOfContact.phone'].hasError('required')">Phone number is required</mat-error> -->
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy">
+                       <input formControlName="email" matInput placeholder="Requester Email*">
+                         <!-- <mat-error *ngIf="pinRequestService.form.controls['pointOfContact.email'].errors?.required">Email is required</mat-error>
+                        <mat-error *ngIf="pinRequestService.form.controls['pointOfContact.email'].errors?.email">Email is invalid</mat-error> -->
+                    </mat-form-field>              
+                </div>
+                  <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="pinRequestService.form.invalid">Submit</button>
+                    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                  </div>
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+</form>
