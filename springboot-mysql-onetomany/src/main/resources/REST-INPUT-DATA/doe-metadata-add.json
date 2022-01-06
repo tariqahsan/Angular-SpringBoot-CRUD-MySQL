@@ -1,0 +1,22 @@
+POST: localhost:8686/api/v1/doeMetadata/add
+
+{
+    "createDate": "2021-07-18",  
+    "doeId": "2345",
+    "authors": "Tariq Ahsan",
+    "governmentContactEmail": "tariq.ahsan.civ@mail.mil",
+    "governmentContactLastName": "Ahsan",
+    "governmentContactPhone": "630-728-2091",
+    "performingOrgName": "DTIC",
+    "submitterEmailAddress": "john.doe.civ@mail.mil",
+    "submitterLastName": "Doe",
+    "submitterPhone": "111-111-1111",
+    "distributionAvailability": "2021-07-18",
+    "documentSubTypeDesc": "Document Sub Type Description",
+    "documentTypeDesc": "Document Type Description",
+    "fundingOrgName": "Pentagon",
+    "doi": "1234ERW34Y",
+    "title": "Test Title",
+    "journalTitle": "Journal Title",
+    "webPublicationDate": "2021-07-18"
+}      
